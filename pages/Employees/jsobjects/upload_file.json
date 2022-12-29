@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "upload_file",
+    "pageId": "Employees",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tupdate_filename: () => {\n\t\tlet i = 0;\n\t\treturn _.map(FilePicker1.files, (f) => {\n\t\t\treturn {\n\t\t\t\tname: filename.text?`${filename.text}_${i+=1}.${f.name.split('.')[1]}`:f.name,\n\t\t\t\tdata: f.data\n\t\t\t}\n\t\t})\n\t},\n\t\n\tsample: ()=>{\n\t\treturn \n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Employees_upload_file",
+  "deleted": false,
+  "gitSyncId": "637b0909b87c411aad4204e4_637f486adbc6e8336d95f274"
+}

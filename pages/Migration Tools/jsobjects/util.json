@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "util",
+    "pageId": "Migration Tools",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcreateEmployeeDb: async () => {\n\t\tlet data = await check_if_table_exists.run({tableName: 'employee'});\n\t\tif (data[0].exists) {\n\t\t\tshowAlert('Employee DB already exists.','info');\n\t\t} else {\n\t\t\tcreate_employee_table.run(() => showAlert('Successfully configured the employee database.','success'), () => {});\n\t\t}\n\t},\n\t\n\tcreateSalaryDb: async () => {\n\t\tlet data = await check_if_table_exists.run({tableName: 'salary'});\n\t\tif (data[0].exists) {\n\t\t\tshowAlert('Salary DB already exists.','info');\n\t\t} else {\n\t\t\tcreate_salary_table.run(() => showAlert('Successfully configured the salary database.','success'), () => {});\n\t\t}\n\t},\n\t\n\tcreateEsopsDb: async () => {\n\t\tlet data = await check_if_table_exists.run({tableName: 'esops'});\n\t\tif (data[0].exists) {\n\t\t\tshowAlert('ESOP DB already exists.','info');\n\t\t} else {\n\t\t\tcreate_esops_table.run(() => showAlert('Successfully configured the ESOP database.','success'), () => {});\n\t\t}\n\t},\n\t\n\tcreateSettingsDb:async () => {\n\t\tlet data = await check_if_table_exists.run({tableName: 'settings'});\n\t\tif (data[0].exists) {\n\t\t\tshowAlert('Settings DB already exists.','info');\n\t\t} else {\n\t\t\tcreate_settings_table.run(() => showAlert('Successfully configured the settings database.','success'), () => {});\n\t\t}\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Migration Tools_util",
+  "deleted": false,
+  "gitSyncId": "6393346b5ab4f8288586dc73_639acc3b5ab4f8288586dec4"
+}

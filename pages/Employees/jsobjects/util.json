@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "util",
+    "pageId": "Employees",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tteamDbOnLoad: () => {\n\t\tstoreValue('empTab', 1)\n\t},\n\n\tgetPods:()=>{\n\t\treturn _.map(_.filter(get_all_settings.data, s=> s.type == 'pod'), s=> {\n\t\t\treturn {\n\t\t\t\tid: s.id,\n\t\t\t\tlabel: s.label, \n\t\t\t\tvalue: s.label,\n\t\t\t}\n\t\t})\n\t},\n\n\tgetHorizontal:() => {\n\t\treturn _.map(_.filter(get_all_settings.data, s=> s.type == 'horizontal'), s=> {\n\t\t\treturn {\n\t\t\t\tid: s.id,\n\t\t\t\tlabel: s.label, \n\t\t\t\tvalue: s.label,\n\t\t\t}\n\t\t})\n\t},\n\n\tgetExpertise:()=>{\n\t\treturn _.map(_.filter(get_all_settings.data, s=> s.type == 'expertise'), s=> {\n\t\t\treturn {\n\t\t\t\tid: s.id,\n\t\t\t\tlabel: s.label, \n\t\t\t\tvalue: s.label,\n\t\t\t}\n\t\t})\n\t},\n\t\n\tsample:()=>{\n\t\treturn fetch_all_emp.data.filter(e => e.email_id == get_emp_by_id.data[0].onboarding_buddy_email_id.toLowerCase());\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Employees_util",
+  "deleted": false,
+  "gitSyncId": "637b0909b87c411aad4204e4_637f5913d4d99c4ab3bf40d4"
+}

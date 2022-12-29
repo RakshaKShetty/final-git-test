@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "util",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcelebrationsToday: () => {\n\t\tconst birthdayImages=[\n\t\t\t'https://everydaypower.com/wp-content/uploads/2017/04/Birthday-Quotes-To-Celebrate-Life-Age-and-Friendships.jpg',\n\t\t\t'https://cdn.pixabay.com/photo/2016/11/18/15/46/birthday-1835443__340.jpg'\n\t\t];\n\t\tconst anniversaryImages=[\n\t\t\t'https://media.istockphoto.com/id/1309237361/photo/card-with-happy-anniversary-words-made-from-mixed-vivid-colored-wooden-letters-on-a-textured.jpg?s=612x612&w=0&k=20&c=NraAjHeA6YXfARnKVrjV7-_oCQ2Pf1qV5UATrs7ClXQ=',\n\t\t\t'https://blog.bonus.ly/hubfs/make-work-anniversaries-meaningful.png'\n\t\t];\n\t\tconst welcomeImage = [\n\t\t\t'https://elearningindustry.com/wp-content/uploads/2021/10/a-successful-remote-onboarding-guide.jpg',\n\t\t\t'https://st2.depositphotos.com/3591429/6308/i/600/depositphotos_63081591-stock-photo-hands-holding-word-welcome.jpg'\n\t\t];\n\t\tlet celebrations = '';\n\t\t\n\t\t_.filter(fetch_employees.data, e => moment(e.birthday, 'DD/MM/YY').format('DD-MM').match(moment().format('DD-MM'))).forEach(e => {\n\t\t\tcelebrations = celebrations + `<div class=\"container\">\n  <img src=\"${birthdayImages[_.random(birthdayImages.length)]}\">\n  <div class=\"top\"> Happy Birthday ${e.name}</div></div>`;\n\t\t});\n\t\t _.filter(_.filter(fetch_employees.data, e => !moment(e.start_date, 'DD/MM/YYYY').format('DD-MM-YYYY').match(moment().format('DD-MM-YYYY'))), e => moment(e.start_date, 'DD/MM/YY').format('DD-MM').match(moment().format('DD-MM'))).forEach(e => {\n\t\t\tcelebrations = celebrations + `<div class=\"container\">\n  <img src=\"${anniversaryImages[_.random(anniversaryImages.length)]}\">\n  <div class=\"top\"> Happy Anniversary ${e.name}</div></div>`;\n\t\t});\n\t\t\n\t\t_.filter(fetch_employees.data, e => moment(e.start_date, 'DD/MM/YYYY').format('DD-MM-YYYY').match(moment().format('DD-MM-YYYY'))).forEach(e => {\n\t\t\tcelebrations = celebrations + `<div class=\"container\">\n  <img src=\"${welcomeImage[_.random(welcomeImage.length)]}\">\n  <div class=\"top\"> Welcome To Appsmith ${e.name}</div></div>`;\n\t\t});\n\t\t\n\t\treturn celebrations;\n\t},\n\t\n\tsample:()=>{\n\t\treturn _.filter(_.filter(fetch_employees.data, e => !moment(e.start_date, 'DD/MM/YYYY').format('DD-MM-YYYY').match(moment().format('DD-MM-YYYY'))), e => moment(e.start_date, 'DD/MM/YY').format('DD-MM').match(moment().format('DD-MM')))\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Home_util",
+  "deleted": false,
+  "gitSyncId": "6393346b5ab4f8288586dc73_63a04fd65ab4f8288586e060"
+}

@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "util",
+    "pageId": "Employee Directory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tonPageLoad:()=>{\n\t\tstoreValue(\"page\", 1)\n\t},\n\tgetPagedEmps: () => {\n\t\treturn _.slice(filter.getEmployee(), (appsmith.store.page - 1) * 20, appsmith.store.page * 20);\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Employee Directory_util",
+  "deleted": false,
+  "gitSyncId": "6393346b5ab4f8288586dc73_63a04ca45ab4f8288586e045"
+}

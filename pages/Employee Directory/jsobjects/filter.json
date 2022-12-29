@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "filter",
+    "pageId": "Employee Directory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetEmployee: () => {\n\t\tlet filter1 = pod_filter.selectedOptionValues.length > 0 ? _.filter(get_employees.data, e => pod_filter.selectedOptionValues.includes(e.primary_department)): get_employees.data;\n\t\tlet filter2 = expertise_filter.selectedOptionValues.length > 0 ? _.filter(filter1, e => expertise_filter.selectedOptionValues.includes(e.area_of_expertise)): filter1;\n\t\treturn horizontal_filter.selectedOptionValues.length > 0 ? _.filter(filter2, e => horizontal_filter.selectedOptionValues.includes(e.horizontal)): filter2;\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Employee Directory_filter",
+  "deleted": false,
+  "gitSyncId": "6393346b5ab4f8288586dc73_63a04cc45ab4f8288586e04f"
+}

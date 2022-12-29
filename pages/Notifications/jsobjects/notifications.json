@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "notifications",
+    "pageId": "Notifications",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcelebration: `{Heading}<div class=\"container\">{image}{TextOnImage}</div>{context}{url}`,\n\n\tnotice: '',\n\n\tcelebrationPreview: () => {\n\t\tlet celeb = `{Heading}<div class=\"container\">{image}{TextOnImage}</div>{context}{url}`;\n\t\t\n\t\tceleb = notification_heading.text == ''? celeb.replace('{Heading}', ''):celeb.replace('{Heading}', `<h2 style='font-family:sans-serif;'> ${notification_heading.text}</h2>`);\n\t\tceleb = notification_Context.text == ''?celeb.replace('{context}', ''):celeb.replace('{context}', `<p style='font-family:sans-serif;'> ${notification_heading.text}</p>`);\n\t\tceleb = notification_filepicker.files.length>0?celeb.replace('{image}', `<img src=\"https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg\">`):celeb.replace('{image}', '');\n\t\tceleb = notification_text_on_picture.text == ''?celeb.replace('{TextOnImage}', ''):celeb.replace('{TextOnImage}', `<div class=\"top\">${notification_text_on_picture.text}</div>`);\n\t\tceleb = notification_link.text == ''? celeb.replace('{url}', ''):celeb.replace('{url}', `<a href=\"${notification_link.text}\">Click Here!</a>`);\n\t\t\n\t\treturn celeb;\n\t}\n}",
+    "variables": [
+      {
+        "name": "celebration",
+        "value": "`{Heading}<div class=\"container\">{image}{TextOnImage}</div>{context}{url}`"
+      },
+      {
+        "name": "notice",
+        "value": "''"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Notifications_notifications",
+  "deleted": false,
+  "gitSyncId": "6393346b5ab4f8288586dc73_63a054775ab4f8288586e076"
+}

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
+      "id": "Employees",
+      "isDefault": true
+    },
+    {
+      "id": "Migration Tools",
+      "isDefault": false
+    },
+    {
+      "id": "Notifications",
+      "isDefault": false
+    },
+    {
+      "id": "Home",
+      "isDefault": false
+    },
+    {
+      "id": "Profile",
+      "isDefault": false
+    },
+    {
+      "id": "Employee Directory",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#FBF4ED",
+  "icon": "bitcoin",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}
